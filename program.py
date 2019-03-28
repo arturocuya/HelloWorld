@@ -4,11 +4,10 @@ letras = {}
 encontradas = []
 
 for letra in palabra:
-	if letra not in encontradas:
-		encontradas.append(letra)
+	if letra not in letras.keys():
 		letras[letra] = 1
 	else:
 		letras[letra] += 1
 
-for encontrada in encontradas:
-	print(encontrada + ":", letras[encontrada])
+for letra in letras.keys():
+	print(letra + ":", letras[letra])
